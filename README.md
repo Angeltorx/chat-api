@@ -13,6 +13,6 @@ Este aproyecto se instala con el comando:
 
 	"npm run dev"
 
-  y constrcuir la version de produccion con:
+  y construir la version de produccion con:
 
 	"npm run build"
