@@ -577,6 +577,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _auto = require("chart.js/auto");
 var _autoDefault = parcelHelpers.interopDefault(_auto);
+var _funciones = require("./funciones");
 (async function() {
     const data = [
         {
@@ -607,7 +608,10 @@ var _autoDefault = parcelHelpers.interopDefault(_auto);
             year: 2016,
             count: 28
         }
-    ];
+    ].map((row)=>({
+            ...row,
+            count: (0, _funciones.incrementarValor)(row.count)
+        }));
     new (0, _autoDefault.default)(document.getElementById("acquisitions"), {
         type: "bar",
         data: {
@@ -622,7 +626,7 @@ var _autoDefault = parcelHelpers.interopDefault(_auto);
     });
 })();
 
-},{"chart.js/auto":"d8NN9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d8NN9":[function(require,module,exports) {
+},{"chart.js/auto":"d8NN9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./funciones":"lWktE"}],"d8NN9":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _chartJs = require("../dist/chart.js");
@@ -14039,6 +14043,12 @@ exports.export = function(dest, destName, get) {
         get: get
     });
 };
+
+},{}],"lWktE":[function(require,module,exports) {
+function incrementarValor(valor) {
+    return valor + 2;
+}
+exports.incrementarValor = incrementarValor;
 
 },{}]},["dNGmx","7Jfkl"], "7Jfkl", "parcelRequire30ab")
 
