@@ -4,16 +4,6 @@ h1 {
   padding-top: 90px;
 }
 
-.footer {
-  color: #fff;
-  text-align: center;
-  background-color: #275ccf;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
-
 .tabla {
   text-align: center;
   flex-flow: wrap;
@@ -80,6 +70,18 @@ main {
   align-items: center;
   padding-top: 45px;
   padding-bottom: 50px;
+  display: flex;
+}
+
+hr {
+  margin: 30px;
+}
+
+footer {
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px;
+  font-family: Open Sans, sans-serif;
   display: flex;
 }
 
